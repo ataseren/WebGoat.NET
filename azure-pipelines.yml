@@ -29,9 +29,17 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: SonarQubeAnalyze@5
+- task: SonarQubePrepare@5
   inputs:
-    jdkversion: 'JAVA_HOME_11_X64'
+    SonarQube: 'YourSonarqubeServerEndpoint'
+    scannerMode: 'MSBuild'
+    projectKey: 'YourProjectKey'
+
+- task: SonarQubeAnalyze@5
+
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
 
 - task: VSTest@2
   inputs:
