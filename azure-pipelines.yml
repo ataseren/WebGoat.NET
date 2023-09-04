@@ -31,9 +31,9 @@ steps:
 
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'YourSonarqubeServerEndpoint'
+    SonarQube: 'azure_sonarqube'
     scannerMode: 'MSBuild'
-    projectKey: 'YourProjectKey'
+    projectKey: 'test'
 
 - task: SonarQubeAnalyze@5
 
