@@ -33,7 +33,7 @@ steps:
   inputs:
     SonarQube: 'azure_sonarqube'
     scannerMode: 'MSBuild'
-    projectKey: 'webgoat_webgoat_AYpgH7rNR_StVq-TD5D7'
+    projectKey: 'webgoat_webgoat_AYpkeCG6HJQZOuANWVFy'
 
 - task: SonarQubeAnalyze@5
 
